@@ -1,0 +1,73 @@
+[
+    {
+      "id": 1,
+      "produktnavn": "TUSINDFRYD sval",
+      "brand": "Flora Danica",
+      "pris": 2499,
+      "fyld": "100% moskusdun",
+      "varmegrad": "sval",
+      "allergivenlig": true,
+      "billede": "tusindfrydsval.jpg"
+    },
+    {
+      "id": 2,
+      "produktnavn": "ANEMONE varm",
+      "brand": "Flora Danica",
+      "pris": 1999,
+      "fyld": "90% moskusdun, 10% moskusfjær",
+      "varmegrad": "varm",
+      "allergivenlig": true,
+      "billede": "anemonevarm.jpg"
+    },
+    {
+      "id": 3,
+      "produktnavn": "ORKIDE ekstra varm",
+      "brand": "Flora Danica",
+      "pris": 24999,
+      "fyld": "100% edderdun",
+      "varmegrad": "ekstra varm",
+      "allergivenlig": true,
+      "billede": "orkideekstravarm.jpg"
+    },
+    {
+      "id": 4,
+      "produktnavn": "ERANTIS sval",
+      "brand": "Flora Danica",
+      "pris": 2499,
+      "fyld": "90% moskusdun, 10% moskusfjær",
+      "varmegrad": "sval",
+      "allergivenlig": true,
+      "billede": "erantissval.jpg"
+    },
+    {
+      "id": 5,
+      "produktnavn": "TUSINDFRYD varm",
+      "brand": "Flora Danica",
+      "pris": 3699,
+      "fyld": "100% moskusdun",
+      "varmegrad": "varm",
+      "allergivenlig": true,
+      "billede": "tusindfrydvarm.jpg"
+    },
+    {
+      "id": 6,
+      "produktnavn": "ANEMONE sval",
+      "brand": "Flora Danica",
+      "pris": 1399,
+      "fyld": "90% moskusdun, 10% moskusfjær",
+      "varmegrad": "sval",
+      "allergivenlig": true,
+      "billede": "anemonesval.jpg"
+    },
+    {
+      "id": 7,
+      "produktnavn": "TUSINDFRYD ekstra varm",
+      "brand": "Flora Danica",
+      "pris": 3999,
+      "fyld": "100% moskusdun",
+      "varmegrad": "ekstra varm",
+      "allergivenlig": true,
+      "billede": "tusindfrydekstravarm.jpg"
+    }
+  ]
+  

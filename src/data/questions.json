@@ -1,0 +1,22 @@
+[
+    {
+      "id": 1,
+      "question": "Hvordan er temperaturen i dit soveværelse?",
+      "options": ["varm", "normal", "kold"]
+    },
+    {
+      "id": 2,
+      "question": "Har du allergi eller sensitiv hud?",
+      "options": ["ja", "nej"]
+    },
+    {
+      "id": 3,
+      "question": "Hvordan føles det, når du sover?",
+      "options": ["varmt", "neutralt", "koldt"]
+    },
+    {
+      "id": 4,
+      "question": "Hvad er dit budget for en dyne?",
+      "options": ["lav", "mellem", "høj"]
+    }
+]
