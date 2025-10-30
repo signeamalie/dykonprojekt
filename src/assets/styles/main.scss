@@ -1,3 +1,29 @@
 body {
-    background-color: palegreen;
+  background-color: palegreen;
+}
+
+.btn-primary {
+  background-color: #870338;
+  color: white;
+  border: none;
+  padding: 15px 50px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #9a0340;
+  }
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  color: #870338;
+  border: 1px solid #870338;
+  padding: 15px 50px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #870338;
+  }
 }
