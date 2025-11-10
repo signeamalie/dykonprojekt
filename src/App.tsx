@@ -1,19 +1,25 @@
 import "./assets/styles/App.css";
 import "./assets/styles/main.scss";
-import DykonButton from "./data/components/atoms/Button";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MainLayout from "./data/components/templates/MainLayout";
+
+// pages
+import HomePage from "./data/components/pages/HomePage";
+import QuizPage from "./data/components/pages/QuizPage";
+import ResultPage from "./data/components/pages/ResultPage";
 
 function App() {
   return (
-    <>
-      <main>
-        <h1>Flora Danica</h1>
-        <DykonButton
-          label="START"
-          variant="primary"
-          onClick={() => console.log("Navigate to quiz page")} //console.log temporary - navigate to quiz page
-        />
-      </main>
-    </>
+    <BrowserRouter>
+      <MainLayout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/quiz" element={<QuizPage />} />
+          <Route path="/result" element={<ResultPage />} />
+        </Routes>
+      </MainLayout>
+    </BrowserRouter>
   );
 }
 

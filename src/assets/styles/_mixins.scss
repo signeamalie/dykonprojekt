@@ -1,0 +1,45 @@
+@import "./variables";
+
+// tekst helpers
+@mixin heading($level) {
+  font-family: $heading-font-family;
+  color: $text-color;
+  margin: 0 0 .5rem;
+
+  @if $level == 1 { font-size: $h1-font-size; }
+  @else if $level == 2 { font-size: $h2-font-size; }
+  @else if $level == 3 { font-size: $h3-font-size; }
+  @else if $level == 4 { font-size: $h4-font-size; }
+  @else if $level == 5 { font-size: $h5-font-size; }
+  @else { font-size: $h6-font-size; }
+}
+
+@mixin text($size: body) {
+  font-family: $body-font-family;
+  color: $text-color;
+
+  @if $size == body { font-size: $base-font-size; }
+  @else if $size == lead { font-size: $h2-font-size; line-height: 1.4; }
+  
+  @else if $size == kicker {
+    font-family: $heading-font-family;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  @else if $size == kicker-large {
+    font-family: $heading-font-family;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  @else if $size == muted {
+    font-size: $base-font-size;
+    color: rgba($text-color, 0.6);
+  }
+}
+
+
+:root { --brand-burgundy: #7a1830; }
