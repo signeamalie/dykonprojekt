@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <>
       <Hero
-        kicker="Flora Danica"
+        kicker="FLORA DANICA"
         title="Find den dyne, der passer til netop dig"
         body="God søvn starter med den rigtige dyne. Vores naturlige og åndbare materialer hjælper dig med at finde den komfort, der passer til dig året rundt."
         imageSrc={heroImg}
