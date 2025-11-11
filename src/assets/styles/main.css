@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* main.scss */
 :root {
   --brand-burgundy: #7a1830;
@@ -60,7 +59,7 @@ body {
      object-fit: cover;
 }
 
-/* tekst styles */
+/* text utilities used by <Text /> atom */
 .text-body {
   font-family: "Georgia", serif;
   color: #2e2e2e;
@@ -150,7 +149,7 @@ button.site-header__logo {
   padding: 0;
 }
 
-/* burgermenu */
+/* burger */
 .burger {
   display: grid;
   gap: 6px;
@@ -166,12 +165,10 @@ button.site-header__logo {
   border-radius: 2px;
 }
 
-/* hero sektion */
+/* hero (layout only; typography comes from components) */
 .hero {
   position: relative;
-  /* centrering */
-  /* card */
-  /* lille label tekst øverst */
+  /* spacing only; text styles come from .text-* utilities / Heading element */
 }
 .hero__media {
   position: relative;
@@ -213,29 +210,14 @@ button.site-header__logo {
           backdrop-filter: saturate(120%) blur(2px);
 }
 .hero .hero__kicker {
-  font-family: "Georgia", serif;
-  color: #2e2e2e;
-  font-family: "Playfair", serif;
-  font-size: 1.1rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
   margin-bottom: 0.35rem;
   opacity: 0.95;
 }
 .hero .hero__title {
-  font-family: "Playfair", serif;
-  color: #2e2e2e;
-  margin: 0 0 0.5rem;
-  font-size: 1.75rem;
-  font-size: clamp(1.9rem, 4.6vw, 3rem);
   line-height: 1.15;
   margin: 0 0 0.6rem;
 }
 .hero .hero__body {
-  font-family: "Georgia", serif;
-  color: #2e2e2e;
-  font-size: 1.5rem;
-  line-height: 1.4;
   line-height: 1.45;
   max-width: 54ch;
   margin: 0 auto 1.1rem;
@@ -253,7 +235,7 @@ button.site-header__logo {
     height: 30vw;
   }
 }
-/* intro sektion */
+/* intro (layout only) */
 .intro {
   padding: 2rem 1rem;
   display: grid;
@@ -267,17 +249,10 @@ button.site-header__logo {
 }
 
 .intro__title {
-  font-family: "Playfair", serif;
-  color: #2e2e2e;
-  margin: 0 0 0.5rem;
-  font-size: 1.75rem;
   margin-bottom: 0.75rem;
 }
 
 .intro__body {
-  font-family: "Georgia", serif;
-  color: #2e2e2e;
-  font-size: 1rem;
   margin: 0 auto 1.25rem;
   line-height: 1.6;
 }

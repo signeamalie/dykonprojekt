@@ -34,7 +34,7 @@ body { background-color: #ffff; }
 .img-small  { width:150px; height:auto; }
 .img-hero   { width:100%; height:auto; object-fit:cover; }
 
-/* tekst styles */
+/* text utilities used by <Text /> atom */
 .text-body   { @include mixins.text(body); }
 .text-lead   { @include mixins.text(lead); }
 .text-kicker { @include mixins.text(kicker); }
@@ -44,7 +44,12 @@ body { background-color: #ffff; }
 .site-header {
   position: sticky; top: 0; background: #fff;
   border-bottom: 1px solid rgba(0,0,0,.06);
-  &__inner { max-width:1100px; margin:0 auto; padding:.75rem 1rem; display:flex; align-items:center; justify-content:space-between; }
+
+  &__inner {
+    max-width:1100px; margin:0 auto; padding:.75rem 1rem;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+
   &__logo  { display:flex; align-items:center; gap:.5rem; cursor:pointer; }
 }
 
@@ -55,10 +60,7 @@ body { background-color: #ffff; }
   padding: 16px;
 }
 
-.logo-img {
-  width: 200px;
-  height: auto;
-}
+.logo-img { width: 200px; height: auto; }
 
 .site-header__menu,
 .site-header__logo,
@@ -66,7 +68,6 @@ button.site-header__menu,
 button.site-header__logo {
   all: unset;
   cursor: pointer;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,14 +79,11 @@ button.site-header__logo {
   box-shadow: none;
   -webkit-appearance: none;
   appearance: none;
-
-}.site-main {
-  width: 100%;
-  max-width: none;
-  padding: 0;
 }
 
-/* burgermenu */
+.site-main { width: 100%; max-width: none; padding: 0; }
+
+/* burger */
 .burger {
   display: grid;
   gap: 6px;
@@ -100,13 +98,14 @@ button.site-header__logo {
   border-radius: 2px;
 }
 
-/* hero sektion */
+/* hero (layout only; typography comes from components) */
 .hero {
   position: relative;
+
   &__media {
     position: relative;
     height: clamp(420px, 52vw, 640px);
-    overflow: hidden; 
+    overflow: hidden;
     width: 100%;
     margin: 0;
     display: block;
@@ -126,16 +125,12 @@ button.site-header__logo {
     margin-right: calc(50% - 50vw);
   }
 
-  /* centrering */
   &__overlay {
-    position: absolute;
-    inset: 0;
-    display: grid;
-    place-items: center;
+    position: absolute; inset: 0;
+    display: grid; place-items: center;
     padding: 1rem;
   }
 
-  /* card */
   .hero__panel {
     width: min(92%, 720px);
     background: rgba(255, 255, 255, 0.88);
@@ -146,67 +141,28 @@ button.site-header__logo {
     backdrop-filter: saturate(120%) blur(2px);
   }
 
-  /* lille label tekst øverst */
-  .hero__kicker {
-    @include mixins.text(kicker-large);
-    margin-bottom: 0.35rem;
-    opacity: .95;
-  }
+  /* spacing only; text styles come from .text-* utilities / Heading element */
+  .hero__kicker { margin-bottom: 0.35rem; opacity: .95; }
+  .hero__title  { line-height: 1.15; margin: 0 0 .6rem; }
+  .hero__body   { line-height: 1.45; max-width: 54ch; margin: 0 auto 1.1rem; opacity: .98; }
 
-  .hero__title {
-    @include mixins.heading(1);
-    font-size: clamp(1.9rem, 4.6vw, 3rem);
-    line-height: 1.15;
-    margin: 0 0 .6rem;
-  }
-
-  .hero__body {
-    @include mixins.text(lead);
-    line-height: 1.45;
-    max-width: 54ch;
-    margin: 0 auto 1.1rem;
-    opacity: .98;
-  }
-
-  .btn-primary {
-    margin-top: .25rem;
-    padding: 14px 54px;
-    font-size: 1rem;
-    border-radius: 6px;
-  }
+  .btn-primary { margin-top: .25rem; padding: 14px 54px; font-size: 1rem; border-radius: 6px; }
 }
 
 @media (min-width: 900px) {
-  .hero__media {
-    height: 30vw;
-  }
+  .hero__media { height: 30vw; }
 }
 
-/* intro sektion */
+/* intro (layout only) */
 .intro {
   padding: 2rem 1rem;
   display: grid;
   place-items: center;
 }
 
-.intro__panel {
-  max-width: 640px;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.intro__title {
-  @include mixins.heading(1);
-  margin-bottom: .75rem;
-}
-
-.intro__body {
-  @include mixins.text(body);
-  margin: 0 auto 1.25rem;
-  line-height: 1.6;
-}
+.intro__panel { max-width: 640px; text-align: center; margin: 0 auto; }
+.intro__title { margin-bottom: .75rem; }
+.intro__body  { margin: 0 auto 1.25rem; line-height: 1.6; }
 
 .intro__panel .btn-primary,
-.intro__panel .btn-secondary {
-  margin-inline: auto;
-}
+.intro__panel .btn-secondary { margin-inline: auto; }
