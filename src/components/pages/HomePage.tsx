@@ -1,6 +1,6 @@
 import Hero from "../molecules/Hero";
 import Intro from "../molecules/Intro";
-import heroImg from "../../../assets/images/dyneherobillede.jpg";
+import heroImg from "../../assets/images/dyneherobillede.jpg";
 import { useNavigate } from "react-router-dom";
 
 export default function HomePage() {
