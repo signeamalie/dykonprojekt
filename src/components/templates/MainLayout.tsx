@@ -1,14 +1,18 @@
+// layout der går igen på alle sider (header + main)
+
 import React from "react";
 import Header from "../molecules/Header";
+
 type MainLayoutProps = {
   children: React.ReactNode;
 };
 
 export default function MainLayout({ children }: MainLayoutProps) {
+  // klik på logo = scroll til top (simulerer “gå til forsiden”)
   const handleLogoClick = () => {
-    // fører tilbage til toppen af siden
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
 
   const handleMenuClick = () => {
     console.log("Menu clicked!");
@@ -17,6 +21,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
   return (
     <>
       <Header onLogoClick={handleLogoClick} onMenuClick={handleMenuClick} />
+      {/* her viser vi sidernes indhold */}
       <main className="site-main">{children}</main>
     </>
   );

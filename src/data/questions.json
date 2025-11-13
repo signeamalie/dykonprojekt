@@ -2,21 +2,26 @@
     {
       "id": 1,
       "question": "Hvordan er temperaturen i dit soveværelse?",
-      "options": ["varm", "normal", "kold"]
+      "options": ["varm", "normal", "kold"],
+      "icon": "varme.png"
     },
     {
       "id": 2,
       "question": "Har du allergi eller sensitiv hud?",
-      "options": ["ja", "nej"]
+      "options": ["ja", "nej"],
+      "icon": "allergi.png"
     },
     {
       "id": 3,
       "question": "Hvordan føles det, når du sover?",
-      "options": ["varmt", "neutralt", "koldt"]
+      "options": ["varmt", "neutralt", "koldt"],
+      "icon": "soevn.png"
     },
     {
       "id": 4,
       "question": "Hvad er dit budget for en dyne?",
-      "options": ["lav", "mellem", "høj"]
+      "options": ["lav", "mellem", "høj"],
+      "icon": "budget.png"
     }
-]
+  ]
+  

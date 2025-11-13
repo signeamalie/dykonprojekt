@@ -1,4 +1,5 @@
+import Questionnaire from "../organisms/Questionnaire";
+
 export default function QuizPage() {
-    return <section className="container">[spørgsmål om dyner]</section>;
-  }
-  
+  return <Questionnaire />;
+}

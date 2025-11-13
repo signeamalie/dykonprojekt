@@ -1,9 +1,12 @@
+// forsiden med hero billede + intro tekst og start-knap
+
 import Hero from "../molecules/Hero";
 import Intro from "../molecules/Intro";
 import heroImg from "../../assets/images/dyneherobillede.jpg";
 import { useNavigate } from "react-router-dom";
 
 export default function HomePage() {
+  // bruges til at skifte side programmatisk
   const navigate = useNavigate();
 
   return (
@@ -20,6 +23,7 @@ export default function HomePage() {
         title="Er du klar til at finde din perfekte dyne?"
         body="Vi gør det enkelt at finde den rigtige dyne. Besvar et par spørgsmål, og få en anbefaling, der passer til netop din søvn."
         ctaLabel="START"
+        // klik på knap sender brugeren videre til quiz-siden
         onCta={() => navigate("/quiz")}
       />
     </>
