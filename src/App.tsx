@@ -5,6 +5,8 @@ import "./assets/styles/main.scss";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainLayout from "./components/templates/MainLayout";
+import CompareView from "./components/organisms/CompareView";
+
 
 // sider
 import HomePage from "./components/pages/HomePage";
@@ -24,7 +26,9 @@ function App() {
           <Route path="/quiz" element={<QuizPage />} />
           {/* resultatside */}
           <Route path="/result" element={<ResultPage />} />
-        </Routes>
+          {/* sammenligningsside */}
+          <Route path="/compare" element={<CompareView />} />
+       </Routes>
       </MainLayout>
     </BrowserRouter>
   );

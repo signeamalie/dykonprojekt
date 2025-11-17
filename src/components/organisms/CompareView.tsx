@@ -33,9 +33,7 @@ export default function CompareView() {
 
   return (
     <section className="compare">
-      {/* midlertidig visning - bare så vi kan se at det virker */}
-      <pre>{JSON.stringify({ a, b }, null, 2)}</pre>
-      {/* senere laver vi et pænt layout her i stedet */}
+      {/* to do: side om side comparison layout her for a & b */}
     </section>
   );
 }

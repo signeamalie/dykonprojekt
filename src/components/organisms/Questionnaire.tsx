@@ -1,6 +1,8 @@
 // styrer hele quiz-flowet: hvilken question der vises, og hvilke svar brugeren har valgt
 
+
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import questions from "../../data/questions.json";
 import QuestionCard from "../molecules/QuestionCard";
 
@@ -20,6 +22,8 @@ export default function Questionnaire() {
   // answers gemmer svarene, key = question id
   const [answers, setAnswers] = useState<Record<number, string>>({});
 
+  const nav = useNavigate(); // router til andre sider
+
   const current = typedQuestions[step];
 
   // finder sti til ikon ud fra filnavn i json
@@ -38,11 +42,12 @@ export default function Questionnaire() {
     if (!answers[current.id]) return;
 
     if (step < typedQuestions.length - 1) {
+      // hvis der er flere spørgsmål, går vi til næste
       setStep(step + 1);
     } else {
       // her er vi færdige med alle spørgsmål
-      console.log("All answers:", answers);
-      // senere: send videre til resultatside
+      // vi sender svarene videre til /result via router state
+      nav("/result", { state: { answers } });
     }
   }
 

@@ -15,7 +15,6 @@ export default function ProductCard({ id, name }: Props) {
   return (
     <div className="card product-card">
       <h3>{name}</h3>
-      {}
 
       <DykonButton
         label={selected ? "Fjern fra sammenligning" : "Vælg til sammenligning"}
