@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 // her gemmer vi hvilke dyner brugeren har valgt til sammenligning
 
 import React, { createContext, useContext, useMemo, useState } from "react";
