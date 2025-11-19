@@ -115,46 +115,6 @@ export default function CompareView() {
   );
 }
 
-// kort tekst der beskriver de vigtigste forskelle
-function buildDifferenceText(a: Duvet, b: Duvet): string {
-  const parts: string[] = [];
-
-  // pris-sammenligning
-  const aCheaper = a.price < b.price;
-  const bCheaper = b.price < a.price;
-
-  if (aCheaper) {
-    parts.push(`${a.name} er billigere end ${b.name}.`);
-  } else if (bCheaper) {
-    parts.push(`${b.name} er billigere end ${a.name}.`);
-  } else {
-    parts.push("De to dyner ligger på samme prisniveau");
-  }
-
-  // simpel "rangering" af varmegrad
-  const warmthRank = (w: string) => {
-    const order = ["sval", "varm", "ekstra varm"];
-    return order.indexOf(w.toLowerCase());
-  };
-
-  const aWarmer = warmthRank(a.warmth) > warmthRank(b.warmth);
-  const bWarmer = warmthRank(b.warmth) > warmthRank(a.warmth);
-
-  if (aWarmer) {
-  parts.push(
-    `${a.name} har en højere varmegrad end ${b.name}.`
-  );
-} else if (bWarmer) {
-  parts.push(
-    `${b.name} har en højere varmegrad end ${a.name}.`
-  );
-} else {
-  parts.push(`Begge dyner har samme varmegrad`);
-}
-
-  return parts.join(" ");
-}
-
 // badges med kort “forklar dynen”-tekst
 function getBadges(duvet: Duvet): string[] {
   const badges: string[] = [];
