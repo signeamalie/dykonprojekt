@@ -58,10 +58,7 @@ B. Klon projektet (for udviklere) <br> git clone https://github.com/signeamalie/
 3. Åbn projektet i Visual Studio Code
 Download VS Code: <br> https://code.visualstudio.com/ <br> Åbn projektmappen via: <br> File -> Open Folder
 
-4. Installer nødvendige filer <br> Åbn terminalen i VS Code: <br> View -> Terminal
-
-Kør:
-npm install
+4. Installer nødvendige filer <br> Åbn terminalen i VS Code: <br> View -> Terminal <br> Kør: npm install
 
 5. Start projektet <br> Når installationen er færdig, kør: <br> <br> npm run dev
 
