@@ -13,16 +13,18 @@ export default function MainLayout({ children }: MainLayoutProps) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-
   const handleMenuClick = () => {
     console.log("Menu clicked!");
   };
 
   return (
-    <>
+    <div className="layout">
       <Header onLogoClick={handleLogoClick} onMenuClick={handleMenuClick} />
+
       {/* her viser vi sidernes indhold */}
       <main className="site-main">{children}</main>
-    </>
+
+      <footer className="site-footer" aria-hidden="true" />
+    </div>
   );
 }

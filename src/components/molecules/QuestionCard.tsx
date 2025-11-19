@@ -26,6 +26,7 @@ export default function QuestionCard({
   return (
     <section
       style={{
+       /*skaber luft omkring spørgsmål*/
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",

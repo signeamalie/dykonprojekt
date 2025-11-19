@@ -14,11 +14,49 @@ type ResultListProps = {
   answers: Record<number, string>;
 };
 
-export default function ResultList({ answers }: ResultListProps) {
-  const nav = useNavigate();
-  const { isSelected, toggle, canCompare } = useCompare();
+// lille hjælpefunktion der bygger en kort forklaring til brugeren
+function buildExplanation(duvet: Duvet, answers: Record<number, string>): string {
+  const temp = answers[1];     // varm / normal / kold
+  const allergy = answers[2];  // ja / nej
+  const feel = answers[3];     // varmt / neutralt / koldt
+  const budget = answers[4];   // lav / mellem / høj
 
-  //filtrering baseret på quiz svar//
+  const parts: string[] = [];
+
+  // temperatur / varme
+  if (temp === "varm") {
+    parts.push("Du har svaret, at du sover varmt, derfor foreslås en mere sval dyne.");
+  } else if (temp === "kold") {
+    parts.push("Du har svaret, at du sover køligt, derfor foreslås en varmere dyne.");
+  } else {
+    parts.push("Du sover ved normal temperatur, så denne dyne passer til et mere balanceret sovemiljø.");
+  }
+
+  // allergi
+  if (allergy === "ja" && duvet.hypoallergenic) {
+    parts.push("Dynen er samtidig velegnet til dig med allergi eller sensitiv hud.");
+  }
+
+  // følelses-præference
+  if (feel === "varmt") {
+    parts.push("Du foretrækker at have det køligere, og dynens varmegrad tager højde for det.");
+  } else if (feel === "koldt") {
+    parts.push("Du vil gerne have det varmere, og dynens varmegrad understøtter det.");
+  }
+
+  // budget
+  if (budget === "lav") {
+    parts.push("Du har angivet et lavere budget, og prisen ligger i den mere prisvenlige ende.");
+  } else if (budget === "mellem") {
+    parts.push("Du har valgt et mellem-budget, og prisen ligger inden for dette niveau.");
+  } else if (budget === "høj") {
+    parts.push("Du er åben for et højere budget, hvilket giver plads til mere eksklusive materialer.");
+  }
+
+  return parts.join(" ");
+}
+
+//filtrering baseret på quiz svar//
 function filterDuvets(answers: Record<number, string>) {
   return allDuvets.filter((duvet) => {
     const temp = answers[1];
@@ -45,11 +83,14 @@ function filterDuvets(answers: Record<number, string>) {
   });
 }
 
+export default function ResultList({ answers }: ResultListProps) {
+  const nav = useNavigate();
+  const { isSelected, toggle, canCompare } = useCompare();
+
   const matches = filterDuvets(answers);
 
   return (
-    <section style={{ padding: "2rem 1rem 4rem" }}>     
-
+    <section style={{ padding: "2rem 1rem 4rem" }}>
       {/* liste med dyner */}
       <div
         style={{
@@ -64,7 +105,7 @@ function filterDuvets(answers: Record<number, string>) {
           <article key={duvet.id}>
             {/* billede */}
             <img
-              src={duvet.images[0]} // fx "/images/tusindfrydekstravarm.jpg"
+              src={duvet.images[0]}
               alt={duvet.name}
               style={{
                 width: "100%",
@@ -112,10 +153,26 @@ function filterDuvets(answers: Record<number, string>) {
 
                 {/* sammenlign-knap – bruger vores compare-context */}
                 <DykonButton
-                  label={isSelected(duvet.id) ? "FJERN FRA SAMMENLIGNING" : "SAMMENLIGN"}
+                  label={
+                    isSelected(duvet.id)
+                      ? "FJERN FRA SAMMENLIGNING"
+                      : "SAMMENLIGN"
+                  }
                   onClick={() => toggle(duvet.id)}
                 />
               </div>
+
+              {/* kort begrundelse for hvorfor dynen matcher brugerens svar */}
+              <p
+                style={{
+                  marginTop: "1.25rem",
+                  fontSize: ".9rem",
+                  lineHeight: 1.5,
+                  color: "#555",
+                }}
+              >
+                {buildExplanation(duvet, answers)}
+              </p>
             </div>
           </article>
         ))}
@@ -133,7 +190,7 @@ function filterDuvets(answers: Record<number, string>) {
         {canCompare ? (
           <>
             <p style={{ marginBottom: "0.75rem" }}>
-              Du har valgt 2 dyner – klar til at sammenligne.
+              Du har valgt 2 dyner - klar til at sammenligne.
             </p>
             <DykonButton
               label="GÅ TIL SAMMENLIGNING"
