@@ -51,13 +51,9 @@ Installer programmet og genstart computeren.
 
 Der er to måder:
 
-A. Hent som ZIP
-Klik på “Code” på GitHub
-Vælg “Download ZIP”
-Pak mappen ud på din computer
+A. Hent som ZIP<br>Klik på “Code” på GitHub <br> Vælg “Download ZIP” <br> Pak mappen ud på din computer
 
-B. Klon projektet (for udviklere)
-git clone REPO-LINK
+B. Klon projektet (for udviklere) <br> git clone https://github.com/signeamalie/dykonprojekt.git
 
 3. Åbn projektet i Visual Studio Code
 Download VS Code:
