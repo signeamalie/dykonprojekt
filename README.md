@@ -48,6 +48,7 @@ https://nodejs.org/en
 Installer programmet og genstart computeren.
 
 2. Hent projektet
+
 Der er to måder:
 
 A. Hent som ZIP
