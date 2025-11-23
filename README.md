@@ -58,8 +58,11 @@ Download VS Code: <br> https://code.visualstudio.com/ <br> Åbn projektmappen vi
 
 4. Åbn terminalen i VS Code: <br> Terminal -> New Terminal 
 
-5. Kør disse i denne rækkefølge: 
- <br> rm -rf node_modules <br> rm package-lock.json <br> npm install <br> npm run dev
+5. Kør disse i denne rækkefølge: <br>
+1. rm -rf node_modules
+2. rm package-lock.json 
+3. npm install
+4. npm run dev
 
 I terminalen vises et link, fx:
 http://localhost:5183/
