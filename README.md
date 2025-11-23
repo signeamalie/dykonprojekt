@@ -37,7 +37,7 @@ Projektet er udviklet som en del af **3. semester på Multimediedesigneruddannel
 
 ## Sådan henter og kører du projektet
 
-Denne vejledning forklarer trin for trin, hvordan du sætter projektet op – også hvis du ikke tidligere har arbejdet med React, Vite eller Node.js.
+Denne vejledning forklarer trin for trin, hvordan du sætter projektet op.
 
 ---
 
@@ -60,7 +60,7 @@ Du kan hente projektet på to måder:
 - Pak ZIP-filen ud på din computer
 
 **B. Klon projektet (for udviklere)**  
-```bash
+
 git clone https://github.com/signeamalie/dykonprojekt.git
 
 ---
@@ -69,8 +69,8 @@ git clone https://github.com/signeamalie/dykonprojekt.git
 Download VS Code her: https://code.visualstudio.com/
 
 Åbn projektmappen ved at vælge enten:
-- **Start → Open**
-- **File → Open Folder**
+- **Start -> Open**
+- **File -> Open Folder**
 
 ---
 
@@ -82,17 +82,17 @@ Dette åbner en terminal i projektets mappe.
 
 ---
 
-### 5. Installer afhængigheder og start projektet
+### 5. Kør kommandoer for at starte projektet
 Kør disse kommandoer i den viste rækkefølge:
 
-```bash
+
 rm -rf node_modules
 rm package-lock.json
 npm install
 npm run dev
 
 I terminalen vises et link, fx:
-http://localhost:5183/
+http://localhost:5178/
 
 
 Klik på linket for at åbne projektet i din browser.
