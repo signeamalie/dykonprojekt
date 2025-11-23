@@ -48,7 +48,7 @@ Installer programmet og genstart computeren.
 
 2. Hent projektet
 
-Der er to måder:
+Der er to måder: <br>
 <br> A. Hent som ZIP<br>Klik på “Code” på GitHub <br> Vælg “Download ZIP” <br> Pak mappen ud på din computer
 
 B. Klon projektet (for udviklere) <br> git clone https://github.com/signeamalie/dykonprojekt.git
