@@ -42,12 +42,12 @@ Denne vejledning er skrevet, så også personer uden teknisk erfaring kan sætte
 1. Installér Node.js
 
 Node.js er nødvendigt for at køre projektet.
-<br> Download det her: https://nodejs.org/en
-Installer programmet og genstart computeren.
+<br> Download det her: https://nodejs.org/en 
+<br> Installer programmet og genstart computeren.
 
 2. Hent projektet
 
-Der er to måder: <br>
+Der er to måder:
 - Hent som ZIP<br>Klik på “Code” på GitHub <br> Vælg “Download ZIP” <br> Pak mappen ud på din computer
 
 - Klon projektet (for udviklere) <br> git clone https://github.com/signeamalie/dykonprojekt.git
