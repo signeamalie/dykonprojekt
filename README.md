@@ -35,33 +35,61 @@ Projektet er udviklet som en del af **3. semester på Multimediedesigneruddannel
 - React Router  
 - ESLint  
 
-# Sådan henter og kører du projektet
+## Sådan henter og kører du projektet
 
-Denne vejledning er skrevet, så også personer uden teknisk erfaring kan sætte projektet op.
+Denne vejledning forklarer trin for trin, hvordan du sætter projektet op – også hvis du ikke tidligere har arbejdet med React, Vite eller Node.js.
 
-1. Installér Node.js
+---
 
-Node.js er nødvendigt for at køre projektet.
-<br> Download det her: https://nodejs.org/en 
-<br> Installer programmet og genstart computeren.
+### 1. Installér Node.js
+For at køre projektet skal du have Node.js installeret.
 
-2. Hent projektet
-<br> Der er to måder:
-- Hent som ZIP<br>Klik på “Code” på GitHub <br> Vælg “Download ZIP” <br> Pak mappen ud på din computer
+1. Gå til https://nodejs.org/en
+2. Download
+3. Installer og genstart computeren
 
-- Klon projektet (for udviklere) <br> git clone https://github.com/signeamalie/dykonprojekt.git
+---
 
+### 2. Hent projektet
+Du kan hente projektet på to måder:
 
-3. Åbn projektet i Visual Studio Code <br>
-Download VS Code: <br> https://code.visualstudio.com/ <br> Åbn projektmappen via: <br> Start -> Open <br> eller <br> File -> Open Folder
+**A. Download som ZIP**
+- Gå til GitHub
+- Klik på **Code**
+- Vælg **Download ZIP**
+- Pak ZIP-filen ud på din computer
 
-4. Åbn terminalen i VS Code: <br> Terminal -> New Terminal 
+**B. Klon projektet (for udviklere)**  
+```bash
+git clone https://github.com/signeamalie/dykonprojekt.git
 
-5. Kør disse i denne rækkefølge: <br>
-rm -rf node_modules <br>
-rm package-lock.json <br> 
-npm install <br> 
-npm run dev <br>
+---
+
+### 3. Åbn projektet i Visual Studio Code
+Download VS Code her: https://code.visualstudio.com/
+
+Åbn projektmappen ved at vælge enten:
+- **Start → Open**
+- **File → Open Folder**
+
+---
+
+### 4. Åbn terminalen i VS Code
+Gør følgende:
+- Gå til **Terminal -> New Terminal**
+
+Dette åbner en terminal i projektets mappe.
+
+---
+
+### 5. Installer afhængigheder og start projektet
+Kør disse kommandoer i den viste rækkefølge:
+
+```bash
+rm -rf node_modules
+rm package-lock.json
+npm install
+npm run dev
 
 I terminalen vises et link, fx:
 http://localhost:5183/
