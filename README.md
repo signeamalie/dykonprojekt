@@ -42,8 +42,7 @@ Denne vejledning er skrevet, så også personer uden teknisk erfaring kan sætte
 1. Installér Node.js
 
 Node.js er nødvendigt for at køre projektet.
-Download det her:
-https://nodejs.org/en
+<br> Download det her: https://nodejs.org/en
 
 Installer programmet og genstart computeren.
 
@@ -59,7 +58,6 @@ B. Klon projektet (for udviklere) <br> git clone https://github.com/signeamalie/
 Download VS Code: <br> https://code.visualstudio.com/ <br> Åbn projektmappen via: <br> Start -> Open <b> eller <br> File -> Open Folder
 
 4. <br> Åbn terminalen i VS Code: <br> Terminal -> New Terminal <br> Kør i denne rækkefølge: 
-
  <br> rm -rf node_modules <br> rm package-lock.json <br> npm install <br> npm run dev
 
 
