@@ -56,9 +56,8 @@ Der er to måder: <br>
 
 3. Åbn projektet i Visual Studio Code <br>
 Download VS Code: <br> https://code.visualstudio.com/ <br> Åbn projektmappen via: <br> Start -> Open <b> eller <br> File -> Open Folder
-<br>
 
-4. Åbn terminalen i VS Code: <br> Terminal -> New Terminal <br> 
+4. Åbn terminalen i VS Code: <br> Terminal -> New Terminal 
 
 5. Kør disse i denne rækkefølge: 
  <br> rm -rf node_modules <br> rm package-lock.json <br> npm install <br> npm run dev
