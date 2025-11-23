@@ -53,8 +53,7 @@ Der er to måder:
 A. Hent som ZIP<br>Klik på “Code” på GitHub <br> Vælg “Download ZIP” <br> Pak mappen ud på din computer
 
 B. Klon projektet (for udviklere) <br> git clone https://github.com/signeamalie/dykonprojekt.git
-
-
+<br>
 
 3. Åbn projektet i Visual Studio Code <br>
 Download VS Code: <br> https://code.visualstudio.com/ <br> Åbn projektmappen via: <br> Start -> Open <b> eller <br> File -> Open Folder
