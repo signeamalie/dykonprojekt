@@ -86,9 +86,9 @@ Dette åbner en terminal i projektets mappe.
 Kør disse kommandoer i den viste rækkefølge:
 
 
-rm -rf node_modules
-rm package-lock.json
-npm install
+rm -rf node_modules <br>
+rm package-lock.json <br>
+npm install <br>
 npm run dev
 
 I terminalen vises et link, fx:
