@@ -49,22 +49,20 @@ Installer programmet og genstart computeren.
 2. Hent projektet
 
 Der er to måder: <br>
-- A. Hent som ZIP<br>Klik på “Code” på GitHub <br> Vælg “Download ZIP” <br> Pak mappen ud på din computer
+- Hent som ZIP<br>Klik på “Code” på GitHub <br> Vælg “Download ZIP” <br> Pak mappen ud på din computer
 
-- B. Klon projektet (for udviklere) <br> git clone https://github.com/signeamalie/dykonprojekt.git
+- Klon projektet (for udviklere) <br> git clone https://github.com/signeamalie/dykonprojekt.git
 <br>
 
 3. Åbn projektet i Visual Studio Code <br>
 Download VS Code: <br> https://code.visualstudio.com/ <br> Åbn projektmappen via: <br> Start -> Open <b> eller <br> File -> Open Folder
 <br>
 
-
 4. Åbn terminalen i VS Code: <br> Terminal -> New Terminal <br> 
-
 
 5. Kør disse i denne rækkefølge: 
  <br> rm -rf node_modules <br> rm package-lock.json <br> npm install <br> npm run dev
-
+<br>
 
 I terminalen vises et link, fx:
 http://localhost:5183/
