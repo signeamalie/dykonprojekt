@@ -55,7 +55,7 @@ Der er to måder: <br>
 <br>
 
 3. Åbn projektet i Visual Studio Code <br>
-Download VS Code: <br> https://code.visualstudio.com/ <br> Åbn projektmappen via: <br> Start -> Open <b> eller <br> File -> Open Folder
+Download VS Code: <br> https://code.visualstudio.com/ <br> Åbn projektmappen via: <br> Start -> Open <br> eller <br> File -> Open Folder
 
 4. Åbn terminalen i VS Code: <br> Terminal -> New Terminal 
 
